@@ -1,0 +1,8 @@
+Django
+djangorestframework
+django-environ
+Pillow
+flake8
+black
+isort
+psycopg2-binary

@@ -11,3 +11,4 @@ django-autoslug
 djoser
 djangorestframework-simplejwt
 PyJWT
+django-localflavor

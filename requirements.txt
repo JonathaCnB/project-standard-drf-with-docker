@@ -12,3 +12,10 @@ djoser
 djangorestframework-simplejwt
 PyJWT
 django-localflavor
+redis
+celery==4.4.7
+django-celery-email
+flower==0.9.7
+argh
+PyYAML
+watchdog

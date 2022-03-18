@@ -21,9 +21,9 @@ ALLOWED_HOSTS = env('ALLOWED_HOSTS').split(" ")
 # Application definition
 
 DJANGO_APPS = [
+    'django.contrib.contenttypes',
     'django.contrib.admin',
     'django.contrib.auth',
-    'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
@@ -36,6 +36,7 @@ TRIRD_PARTY_APPS = [
     'rest_framework',
     'djoser',
     'rest_framework_simplejwt',
+    "djcelery_email",
 ]
 
 LOCAL_APPS = [
@@ -55,6 +56,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CSRF_TRUSTED_ORIGINS = ['http://localhost:8080']
 
 ROOT_URLCONF = 'core.urls'
 
@@ -152,10 +155,10 @@ DJOSER = {
     },
 }
 
-import logging
-import logging.config
+import logging  # noqa
+import logging.config  # noqa
 
-from django.utils.log import DEFAULT_LOGGING
+from django.utils.log import DEFAULT_LOGGING  # noqa
 
 logger = logging.getLogger(__name__)
 
